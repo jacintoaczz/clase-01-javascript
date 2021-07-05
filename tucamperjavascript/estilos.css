@@ -1,0 +1,1151 @@
+@charset "utf-8";
+/* CSS Document */
+/*aqui empieza el header*/
+.siguenos {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px auto;
+}
+.item-l {
+  margin-left: 20px;
+}
+.siguenos ul {
+  display: flex;
+  list-style: none;
+  margin-right: 70px;
+}
+.siguenos li a {
+  display: inline-block;
+  font-size: 25px;
+  margin-top: 3px;
+  padding-left: 1.5em;
+  color: #ffffff;
+}
+.face a:hover {
+  cursor: pointer;
+  color: #AD7152;
+}
+.insta a:hover {
+  cursor: pointer;
+  color: #AD7152;
+}
+.logo-buscar-carro {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+#item-buscador {
+  width: 32%;
+  border: solid 2px #707070;
+  outline: none;
+  padding: 6px;
+  border-radius: 50px;
+}
+#contenido-buscador {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  list-style: none;
+  width: 40%;
+  top: 113px;
+  left: 50%;
+  transform: translate(-50%);
+  background: #ffffff;
+  z-index: 10;
+  display: none;
+}
+#contenido-buscador li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #707070;
+}
+#contenido-buscador li a:hover {
+  background: #f3f3f3;
+}
+#item-menu {
+  visibility: hidden;
+  border: solid 2px #707070;
+  padding: 6px;
+  border-radius: 3px;
+}
+.item-carrito {
+  border: solid 2px #707070;
+  padding: 6px;
+  border-radius: 40px;
+  margin-right: 80px;
+}
+.logo-buscar-carro i {
+  color: #707070;
+}
+#item-buscador:hover {
+  cursor: pointer;
+  background: #f3f3f3;
+}
+#cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+}
+#item-menu:hover {
+  cursor: pointer;
+  background: #E6E1DE;
+}
+.item-carrito:hover {
+  cursor: pointer;
+  background: #E6E1DE;
+}
+.logo {
+  margin-left: 5px;
+}
+/*--------------aqui empieza el navegador--------------------*/
+#navegador {
+  display: flex;
+  background: #e6d1de;
+  width: 100%;
+  margin: 5px auto;
+  text-align: center;
+  justify-content: space-between;
+}
+#navegador ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+.menu > li > a {
+  display: block;
+  padding: 1rem 7rem;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.25em;
+}
+.menu > li > a:hover {
+  transform: scale(1.4);
+  color: #ffffff;
+}
+.submenu {
+  position: absolute;
+  background: #e6d1de;
+  width: 100%;
+  display: none;
+}
+.submenu li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+.submenu li a:hover {
+  background: #707070;
+  color: #ffffff;
+}
+.accesorios3 i {
+  margin-left: 4px;
+  font-size: 17px;
+}
+.menu li:hover .submenu {
+  display: block;
+  z-index: 3;
+}
+/*-----aqui empieza el main pagina inicio--------*/
+.inicio {
+  display: flex;
+  width: 100%;
+}
+.inicio section {
+  width: 70%;
+}
+.caja {
+  width: 100%;
+  height: 400px;
+}
+.caja img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.inicio aside {
+  width: 35%;
+}
+.noticias {
+  border: solid 1px #707070;
+  background: #EDEBEB;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 7px;
+  height: 400px;
+  overflow: auto;
+}
+.noticias div {
+  border: solid 1px #707070;
+  height: 110px;
+  width: 90%;
+  margin: 10px auto;
+  background: #ffffff;
+}
+.noticias a {
+  display: inline-block;
+  color: #F3790E;
+  text-decoration: none;
+  border: solid 2px #F3790E;
+  padding: 4px 8px;
+  margin-top: 10px;
+}
+/*aqui empieza el main pagina nosotros*/
+.nosotros {
+  display: flex;
+  width: 100%;
+}
+.nosotros section {
+  width: 75%;
+}
+.nosotros aside {
+  width: 25%;
+}
+.nosotros .caja {
+  width: 100%;
+  height: 250px;
+}
+.videos {
+  background: #EDEBEB;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 7px;
+  border: solid 1px #707070;
+  height: 480px;
+  overflow: auto;
+}
+.nosotros p {
+  width: 98%;
+  padding: 20px 20px;
+  line-height: 2.5;
+}
+.videos h1 {
+  border: solid 1px #707070;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  background: #ffffff;
+}
+.videos h2 {
+  border: solid 1px #707070;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  background: #ffffff;
+}
+video {
+  width: 95%;
+  height: 250px;
+}
+/*------aqui empieza el main accesorios-------*/
+.caja-accesorios {
+  width: 100%;
+  height: 400px;
+}
+.caja-accesorios img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/*aqui empieza el main pagina legislacion*/
+.legislacion .caja {
+  width: 100%;
+  height: 280px;
+}
+.legislacion h1 {
+  text-align: center;
+  font-size: 2em;
+}
+.legislacion p {
+  padding: 10px 30px;
+}
+/*----aqui empieza el main muebles----*/
+#muebles {
+  display: flex;
+  width: 100%;
+}
+#muebles ul {
+  list-style: none;
+  background: #e6d1de;
+  border: solid 1px #767272;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0px;
+}
+#muebles li a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  padding: 1.2em 3em;
+}
+.img1 {
+  box-sizing: border-box;
+  border: solid 1px #767272;
+  width: 480px;
+  height: 445px;
+  margin: 10px 10px 5px 0px;
+}
+.img2 {
+  box-sizing: border-box;
+  border: solid 1px #767272;
+  width: 480px;
+  height: 445px;
+  margin: 10px 10px 5px 0px;
+}
+.img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.right i {
+  font-size: 40px;
+  color: #000000;
+  margin-top: 180px;
+}
+.left i {
+  font-size: 40px;
+  color: #000000;
+  margin-top: 180px;
+  margin-left: 30px;
+}
+.right i:hover {
+  color: #707070;
+  cursor: pointer;
+}
+.left i:hover {
+  color: #707070;
+  cursor: pointer;
+}
+#muebles li a:hover {
+  cursor: pointer;
+  background: #707070;
+  color: #ffffff;
+}
+/*-------------------aqui empieza el muebles responsive------------------*/
+.muebles-responsive {
+  display: block;
+}
+.left-responsive i {
+  font-size: 30px;
+  color: #000000;
+}
+.left-responsive i:hover {
+  color: #707070;
+  cursor: pointer;
+}
+.contenedor-responsive {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenedor-responsive div {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+.contenedor-responsive img {
+  width: 100%;
+  height: 100%;
+}
+.contenedor-responsive2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenedor-r {
+  box-sizing: border-box;
+  align-items: center;
+  border: solid 1px #767272;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+}
+.contenedor-r img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+.contenedor-r .img2 img {
+  object-fit: contain;
+}
+.contenedor-r h3 {
+  text-align: center;
+  margin-top: -50px;
+  margin-left: 40px;
+}
+.contenedor-r p {
+  height: 40px;
+  padding: 20px 13px 0;
+}
+.contenedor-r h4 {
+  text-align: center;
+}
+.button-responsive {
+  margin-left: 25%;
+}
+.button-responsive:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+.muebles-responsive {
+  display: none;
+}
+/*......aqui empieza el main muebles2........*/
+.shopping-cart-items{
+	position :absolute;
+	width: 60%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	background: #D8D6D6;
+}
+.row{
+	display: flex;
+}
+.row div{
+	padding: 5px 20px;
+}
+.buttonDelete{
+	margin-left: 80px;
+}
+.shopping-cart-item-title{
+	margin: 0px;
+}
+.shopping-cart-item{
+	width: 70px;
+}
+#muebles2 {
+  display: flex;
+}
+.contenedor {
+  border: solid 1px #767272;
+  margin: 5px 50px;
+  width: 450px;
+  height: 430px;
+  align-items: center;
+}
+.contenedor img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+.i2 img {
+  object-fit: contain;
+}
+.contenedor h3 {
+  text-align: center;
+  margin-top: -50px;
+}
+.contenedor h4 {
+  text-align: center;
+  height: 50px;
+}
+.contenedor p {
+  height: 60px;
+  margin-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.5;
+}
+button {
+  padding: 7px 30px;
+  background: #F3790E;
+  color: #ffffff;
+  border-radius: 50px;
+  border-style: none;
+}
+.button {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.button:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+#muebles2 .left {
+  margin-left: 10px;
+}
+/*.......aqui empieza la pagina oferta.......*/
+.pag-oferta {
+  display: flex;
+}
+.left-oferta i {
+  font-size: 40px;
+  color: #000000;
+  margin-top: 180px;
+  margin-left: 15px;
+}
+.left-oferta i:hover {
+  color: #707070;
+  cursor: pointer;
+}
+.contenedor-oferta {
+  width: 400px;
+  margin-top: 0px;
+  margin-left: 70px;
+}
+.contenedor-oferta div {
+  text-align: center;
+  width: 130px;
+  height: 120px;
+  display: inline-block;
+  margin: 30px;
+}
+.contenedor-oferta div img {
+  border: solid 1px #767272;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedor-oferta p {
+  margin: 0px;
+}
+.contenedor-oferta2 {
+  display: block;
+  justify-content: center;
+  margin-left: 250px;
+  margin-top: 70px;
+}
+.contenedor-oferta2 h1 {
+  text-align: center;
+}
+.contenedor-oferta2 h2 {
+  padding: 1.2em 2em;
+  color: #F3790E;
+  border: solid 2px #F3790E;
+  border-radius: 50%;
+}
+.contenedor-oferta2 p {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.contenedor-oferta2 h3 {
+  text-align: center;
+}
+.boton-pag-oferta {
+  margin: 40px;
+}
+.button-oferta {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.button-oferta:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+/*-------aqui empieza formulario1---------*/
+h3 {
+  text-align: center;
+}
+.formulario {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.articulos div {
+  border: solid 1px #767272;
+  width: 80px;
+  height: 50px;
+  margin: 25px 90px;
+}
+.linea {
+  border-bottom: solid 2px #767272;
+  width: 95%;
+  margin: 30px auto;
+}
+.articulos p {
+  text-align: center;
+}
+.articulos i {
+  font-size: 25px;
+  margin-top: 12px;
+  color: #808080;
+}
+.articulos i:hover {
+  cursor: pointer;
+  color: #000000;
+}
+.trash {
+  text-align: center;
+}
+.precio {
+  display: flex;
+  width: 100%;
+}
+.total {
+  margin: auto;
+}
+.precio i {
+  font-size: 40px;
+  color: #000000;
+  margin: 50px 0 0 30px;
+}
+.precio i:hover {
+  cursor: pointer;
+  color: #707070;
+}
+.div-boton-f {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 40px auto;
+}
+.boton-f a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.boton-f:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+/*-----------aqui empieza el formulario2--------------*/
+#formulario2 {
+  display: block;
+}
+.atras i {
+  position: absolute;
+  left: 30px;
+  margin-top: 400px;
+  font-size: 40px;
+  color: #000000;
+}
+.atras i:hover {
+  cursor: pointer;
+  color: #707070;
+}
+.datos {
+  margin-top: 20px;
+}
+.datos1 {
+  width: 70%;
+  height: 400px;
+  margin-left: 90px;
+}
+.input {
+  width: 50%;
+  height: 15px;
+}
+label {
+  display: inline-block;
+  width: 30%;
+}
+#select {
+  width: 35%;
+  height: 20px;
+}
+#select:hover {
+  cursor: pointer;
+  background: #e6e1de;
+}
+#codigo-postal {
+  width: 35%;
+}
+#ciudad {
+  width: 25%;
+}
+#provincia {
+  width: 25%;
+}
+#telefono {
+  width: 25%;
+}
+.div-botonf2 {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translate(-50%)
+}
+.boton-f2 {
+  visibility: hidden;
+  margin-bottom: 50px;
+}
+.boton-f2 a {
+  text-decoration: none;
+}
+.boton-f2:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+.boton-f2-enviar:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+#boton-enviar {
+  margin-right: 50px;
+}
+input:focus {
+  cursor: pointer;
+  background: #e6e1de;
+}
+/*--------------aqui empieza el formulario3-------------------*/
+#formulario3 {
+  height: 440px;
+}
+.datos3 {
+  margin: 40px 0 0 30px;
+}
+.datos3 b {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.datos3 img {
+  margin-left: 0px;
+}
+#tarjeta {
+  width: 30%;
+}
+#vencimiento {
+  width: 10%;
+}
+#vencimiento-bis {
+  width: 10%;
+}
+#cvc {
+  width: 10%;
+}
+.anular-pago {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-top: 80px;
+}
+.boton-a {
+  background: #707070;
+  color: #ffffff;
+  margin-right: 50px;
+}
+.boton-a a {
+  text-decoration: none;
+}
+.boton-a:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid 2px #707070;
+  color: #707070;
+  background: #FFFBFB;
+}
+.boton-p:hover {
+  cursor: pointer;
+  padding: 5px 28px;
+  border: solid #F3790E;
+  color: #F3790E;
+  box-sizing: border-box;
+  background: #FFFBFB;
+}
+span {
+  margin-left: 20px;
+}
+span:hover {
+  cursor: pointer;
+  color: #707070;
+}
+.mastercad {
+  height: 30px;
+  margin-right: 20px;
+}
+.visa {
+  height: 25px;
+  padding: 3px 0;
+}
+.datos3 img:hover {
+  cursor: pointer;
+  background: #E6E1DE;
+}
+.datos3 .cvc-img {
+  opacity: 0;
+  margin-left: 10px;
+  width: 80px;
+  height: 50px;
+}
+.cvc-img:hover {
+  opacity: 1;
+}
+/*-----aqui empieza el footer----*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #271001;
+  width: 100%;
+  height: auto;
+  margin: 5px auto;
+  color: #ffffff;
+}
+.contactenos {
+  margin: 5px;
+}
+.datos-footer {
+  text-align: center;
+}
+.footer p {
+  display: inline-block;
+  padding: 0.5em 8em;
+  margin-top: 2px;
+}
+.contac i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+/*---------------aqui empieza el media queries--------------*/
+@media only screen and (max-width: 768px) {
+  .inicio {
+    display: block;
+    width: 100%;
+  }
+  .logo {
+    width: 180px;
+  }
+  #navegador {
+    display: none;
+  }
+  .menu > li > a {
+    display: block;
+    padding: 0.8rem 7rem;
+    font-size: 1em;
+  }
+  .submenu li a {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .inicio section {
+    width: 100%;
+  }
+  .inicio aside {
+    width: 100%;
+    margin: 5px auto;
+  }
+  /*-----aqui empieza media queries nosotros-----*/
+  .nosotros {
+    display: block;
+    width: 100%;
+  }
+  .nosotros section {
+    width: 100%;
+    margin: 5px auto;
+  }
+  .nosotros aside {
+    width: 98%;
+    margin: 5px auto;
+  }
+  video {
+    width: 95%;
+    height: auto;
+  }
+  /*-------aqui empieza media queries header-------*/
+  .item-buscador {
+    margin-left: 40px;
+    padding-left: 260px;
+    padding-right: 20px;
+  }
+  #item-menu {
+    visibility: visible;
+    margin-left: 25px;
+  }
+  .item-carrito {
+    margin-left: 25px;
+  }
+  /*----media queries navegador-----*/
+  #navegador {
+    justify-content: center;
+    width: 80%;
+  }
+  .menu > li {
+    display: block;
+    position: relative;
+  }
+  /*---media queries accesorios------*/
+  #muebles {
+    display: none;
+  }
+  #muebles2 {
+    display: none;
+  }
+  .muebles-responsive {
+    display: block;
+  }
+  .contenedor-responsive {
+    width: 100%;
+    justify-content: center;
+  }
+  .contenedor-responsive2 {
+    width: 100%;
+    justify-content: center;
+  }
+  /*-----media queries pagina oferta-----*/
+  .left-oferta i {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  .contenedor-oferta {
+    width: 300px;
+    margin-left: 0px;
+  }
+  .contenedor-oferta div {
+    display: block;
+  }
+  .contenedor-oferta2 {
+    margin-left: 0px;
+  }
+  .contenedor-oferta2 h2 {
+    margin-top: 150px;
+  }
+  /*------media queries footer-----*/
+  .datos-footer {
+    justify-content: space-between;
+  }
+  .footer p {
+    margin-top: 10px;
+    padding: 10px 10px;
+  }
+  /*-----media queries formulario1------*/
+  .formulario div {
+    margin: 25px 5px;
+  }
+  /*-----media queries formulario2------*/
+  .datos1 {
+    height: 420px;
+  }
+  .div-botonf2 {
+    display: flex;
+    margin-left: 50%;
+    transform: translate(-50%)
+  }
+  .atras i {
+    position: absolute;
+    top: 550px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .item-r {
+    display: none;
+  }
+  .siguenos ul {
+    margin-right: 5px;
+  }
+  .siguenos li a {
+    padding-left: 1em;
+  }
+  .logo {
+    width: 150px;
+  }
+  #item-buscador {
+    display: none;
+  }
+  #item-menu {
+    display: none;
+  }
+  .item-carrito {
+    margin-right: 5px;
+  }
+  #navegador {
+    display: block;
+    width: 100%;
+  }
+  .menu > li > a {
+    display: block;
+    padding: 1em 6em;
+    font-size: 0.9em;
+  }
+  /*-----aqui empieza media queries pagina inicio-----*/
+  .caja {
+    width: 100%;
+    height: 200px;
+    margin: 1px auto;
+  }
+  .caja img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .noticias {
+    width: 100%;
+    margin: 1px auto;
+  }
+  .noticias div {
+    border: solid 1px #707070;
+    height: 150px;
+    width: 92%;
+    margin: 10px auto;
+    background: #ffffff;
+  }
+  /*-------aqui empieza media queries footer--------*/
+  .footer {
+    display: block;
+  }
+  .footer p {
+    font-size: 0.9em;
+    padding: 20px;
+  }
+  .muebles-responsive {
+    width: 100%;
+  }
+  .contenedor-responsive div {
+    width: 290px;
+    height: 290px;
+    margin: 3px;
+  }
+  .contenedor-responsive img {
+    width: 100%;
+    height: 100%;
+  }
+  .contenedor-r {
+    margin: 3px;
+    width: 290px;
+    height: 290px;
+  }
+  .contenedor-r img {
+    width: 80px;
+    height: 80px;
+  }
+  .contenedor-r h3 {
+    font-size: 1em;
+  }
+  .contenedor-r p {
+    font-size: 0.9em;
+    padding: 2em 1em;
+    height: auto;
+  }
+  /*------media queries pagina oferta---------*/
+  .pag-oferta {
+    display: block;
+  }
+  .contenedor-oferta2 h3 {
+    margin: auto;
+    width: 40%;
+    padding: 1.5em 0.5em;
+  }
+  .contenedor-oferta {
+    width: 60%;
+    margin: 5px auto;
+  }
+  .button-oferta {
+    width: 70%;
+  }
+  /*---media queries formulario1------*/
+  .articulos div {
+    border: solid 1px #767272;
+    width: 40px;
+    height: 25px;
+  }
+  .articulos i {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  #formulario1 p {
+    font-size: 0.8em;
+  }
+  /*-----media queries formulario2*/
+  .datos1 {
+    display: block;
+    height: 570px;
+  }
+  .input {
+    width: 80%;
+    height: 12px;
+  }
+  label {
+    display: block;
+    width: 50%;
+    font-size: 0.8em;
+  }
+  #select {
+    width: 50%;
+    height: 17px;
+  }
+  #codigo-postal {
+    width: 50%;
+  }
+  #ciudad {
+    width: 50%;
+  }
+  #provincia {
+    width: 50%;
+  }
+  #telefono {
+    width: 50%;
+  }
+  .boton-f2 {
+    top: 450px;
+    left: 120px;
+  }
+  .atras i {
+    top: 450px;
+  }
+  /*-----media queries formulario3-----*/
+  #formulario3 {
+    height: 450px;
+  }
+  #formulario3 span {
+    font-size: 0.8em;
+  }
+  #tarjeta {
+    width: 75%;
+  }
+  #vencimiento {
+    width: 21%;
+  }
+  #vencimiento-bis {
+    width: 21%
+  }
+  #cvc {
+    width: 31%;
+  }
+  #img-tarjetas {
+    width: auto;
+  }
+  .anular-pago {
+    margin-top: 50px;
+  }
+}
+
+/* Ocultamos el id de cada item */
+.item-id{
+  display: none;
+}

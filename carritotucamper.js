@@ -113,3 +113,95 @@ function itemTienda(itemTitulo, itemPrecio, itemImg) {
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
 }
+
+/**
+ * Cargamos los elementos del carrito que tenemos almacenados en el localStorage
+ */
+const prepareCartValues = () => {
+  const formDiv = document.querySelector(".formulario");
+  console.log(formDiv);
+
+  // Creamos el elemento que contiene la informacion del carrito
+  const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
+  console.log(cartData);
+
+  cartData.forEach((cartItem) => {
+    const itemDiv = createCartItem(cartItem);
+    formDiv.append(itemDiv);
+  });
+
+  addCartTotal();
+};
+
+const createCartItem = (data) => {
+  let itemDiv = document.createElement("div");
+  itemDiv.setAttribute("class", "cart-item");
+
+  // Div con informacion del articulo
+  let articleDiv = document.createElement("div");
+  articleDiv.setAttribute("class", "articulos");
+
+  let p = document.createElement("p");
+  p.innerHTML = `${data.nombre}`;
+
+  articleDiv.append(p);
+
+  // Div con informacion de la cantidad de articulos
+  let amountDiv = document.createElement("div");
+  amountDiv.setAttribute("class", "articulos");
+
+  let p2 = document.createElement("p");
+  p2.innerHTML = `${data.cantidad}`;
+
+  amountDiv.append(p2);
+
+  // Div con informacion del precio de los articulos
+  let priceDiv = document.createElement("div");
+  priceDiv.setAttribute("class", "articulos");
+
+  let p3 = document.createElement("p");
+  p3.innerHTML = `${data.precio}`;
+
+  priceDiv.append(p3);
+
+  // Boton para eliminar articulos
+  const deleteButton = document.createElement("button");
+  deleteButton.setAttribute("class", "btn-delete");
+  deleteButton.addEventListener("click", function () {
+    deleteCartItem(data.id);
+  });
+
+  let iconSpan = document.createElement("span");
+  let icon = document.createElement("i");
+  icon.setAttribute("class", "fas fa-trash");
+
+  iconSpan.append(icon);
+  deleteButton.append(iconSpan);
+
+  // Añadimos todos los elementos al div correspondiente
+  itemDiv.append(articleDiv);
+  itemDiv.append(amountDiv);
+  itemDiv.append(priceDiv);
+  itemDiv.append(deleteButton);
+
+  return itemDiv;
+};
+
+const deleteCartItem = (itemId) => {
+  console.log(itemId);
+};
+
+const addCartTotal = () => {
+  let totalPrice = 0;
+  const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
+
+  cartData.forEach((item) => {
+    totalPrice = totalPrice + parseFloat(item.precio * item.cantidad);
+  });
+
+  const totalDiv = document.querySelector(".total");
+  console.log(totalDiv);
+  let p = document.createElement("p");
+  p.innerHTML = `TOTAL: ${totalPrice.toFixed(3)}`;
+  totalDiv.append(p);
+};

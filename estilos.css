@@ -28,11 +28,11 @@
 }
 .face a:hover {
   cursor: pointer;
-  color: #AD7152;
+  color: #ad7152;
 }
 .insta a:hover {
   cursor: pointer;
-  color: #AD7152;
+  color: #ad7152;
 }
 .logo-buscar-carro {
   display: flex;
@@ -100,11 +100,11 @@
 }
 #item-menu:hover {
   cursor: pointer;
-  background: #E6E1DE;
+  background: #e6e1de;
 }
 .item-carrito:hover {
   cursor: pointer;
-  background: #E6E1DE;
+  background: #e6e1de;
 }
 .logo {
   margin-left: 5px;
@@ -186,7 +186,7 @@
 }
 .noticias {
   border: solid 1px #707070;
-  background: #EDEBEB;
+  background: #edebeb;
   box-sizing: border-box;
   text-align: center;
   margin-left: 7px;
@@ -202,9 +202,9 @@
 }
 .noticias a {
   display: inline-block;
-  color: #F3790E;
+  color: #f3790e;
   text-decoration: none;
-  border: solid 2px #F3790E;
+  border: solid 2px #f3790e;
   padding: 4px 8px;
   margin-top: 10px;
 }
@@ -224,7 +224,7 @@
   height: 250px;
 }
 .videos {
-  background: #EDEBEB;
+  background: #edebeb;
   box-sizing: border-box;
   text-align: center;
   margin-left: 7px;
@@ -409,36 +409,36 @@ video {
 .button-responsive:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid #F3790E;
-  color: #F3790E;
+  border: solid #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 .muebles-responsive {
   display: none;
 }
 /*......aqui empieza el main muebles2........*/
-.shopping-cart-items{
-	position :absolute;
-	width: 60%;
-	margin-left: 50%;
-	transform: translate(-50%);
-	background: #D8D6D6;
+.shopping-cart-items {
+  position: absolute;
+  width: 60%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  background: #d8d6d6;
 }
-.row{
-	display: flex;
+.row {
+  display: flex;
 }
-.row div{
-	padding: 5px 20px;
+.row div {
+  padding: 5px 20px;
 }
-.buttonDelete{
-	margin-left: 80px;
+.buttonDelete {
+  margin-left: 80px;
 }
-.shopping-cart-item-title{
-	margin: 0px;
+.shopping-cart-item-title {
+  margin: 0px;
 }
-.shopping-cart-item{
-	width: 70px;
+.shopping-cart-item {
+  width: 70px;
 }
 #muebles2 {
   display: flex;
@@ -475,7 +475,7 @@ video {
 }
 button {
   padding: 7px 30px;
-  background: #F3790E;
+  background: #f3790e;
   color: #ffffff;
   border-radius: 50px;
   border-style: none;
@@ -487,10 +487,10 @@ button {
 .button:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid 2px #F3790E;
-  color: #F3790E;
+  border: solid 2px #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 #muebles2 .left {
   margin-left: 10px;
@@ -541,8 +541,8 @@ button {
 }
 .contenedor-oferta2 h2 {
   padding: 1.2em 2em;
-  color: #F3790E;
-  border: solid 2px #F3790E;
+  color: #f3790e;
+  border: solid 2px #f3790e;
   border-radius: 50%;
 }
 .contenedor-oferta2 p {
@@ -563,13 +563,13 @@ button {
 .button-oferta:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid 2px #F3790E;
-  color: #F3790E;
+  border: solid 2px #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 /*-------aqui empieza formulario1---------*/
-h3 {
+/* h3 {
   text-align: center;
 }
 .formulario {
@@ -602,7 +602,7 @@ h3 {
 }
 .trash {
   text-align: center;
-}
+} */
 .precio {
   display: flex;
   width: 100%;
@@ -632,10 +632,10 @@ h3 {
 .boton-f:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid 2px #F3790E;
-  color: #F3790E;
+  border: solid 2px #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 /*-----------aqui empieza el formulario2--------------*/
 #formulario2 {
@@ -691,7 +691,7 @@ label {
 .div-botonf2 {
   display: inline-block;
   margin-left: 50%;
-  transform: translate(-50%)
+  transform: translate(-50%);
 }
 .boton-f2 {
   visibility: hidden;
@@ -703,18 +703,18 @@ label {
 .boton-f2:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid 2px #F3790E;
-  color: #F3790E;
+  border: solid 2px #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 .boton-f2-enviar:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid 2px #F3790E;
-  color: #F3790E;
+  border: solid 2px #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 #boton-enviar {
   margin-right: 50px;
@@ -770,15 +770,15 @@ input:focus {
   padding: 5px 28px;
   border: solid 2px #707070;
   color: #707070;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 .boton-p:hover {
   cursor: pointer;
   padding: 5px 28px;
-  border: solid #F3790E;
-  color: #F3790E;
+  border: solid #f3790e;
+  color: #f3790e;
   box-sizing: border-box;
-  background: #FFFBFB;
+  background: #fffbfb;
 }
 span {
   margin-left: 20px;
@@ -797,7 +797,7 @@ span:hover {
 }
 .datos3 img:hover {
   cursor: pointer;
-  background: #E6E1DE;
+  background: #e6e1de;
 }
 .datos3 .cvc-img {
   opacity: 0;
@@ -955,7 +955,7 @@ span:hover {
   .div-botonf2 {
     display: flex;
     margin-left: 50%;
-    transform: translate(-50%)
+    transform: translate(-50%);
   }
   .atras i {
     position: absolute;
@@ -1132,7 +1132,7 @@ span:hover {
     width: 21%;
   }
   #vencimiento-bis {
-    width: 21%
+    width: 21%;
   }
   #cvc {
     width: 31%;
@@ -1146,6 +1146,39 @@ span:hover {
 }
 
 /* Ocultamos el id de cada item */
-.item-id{
+.item-id {
+  display: none;
+}
+
+/* 
+  Estilizando la pagina 'formulario1'  */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cabecera {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin: 0.5rem 0rem;
+}
+
+.btn-delete {
+  display: block;
+  color: red;
+  border-radius: 0.5rem;
+  border-color: red;
+  cursor: pointer;
+}
+
+.d-none {
   display: none;
 }
