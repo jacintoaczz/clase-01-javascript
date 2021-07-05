@@ -26,58 +26,58 @@ function comprarBoton(event) {
     nombre: itemTitulo,
     precio: itemPrecio,
     imagen: itemImg,
-    cantidad: 0,
+    cantidad: 1,
   };
 
   // Haciendo la misma comprobacion, pero con .filter()
-  let nuevoArreglo, nuevaCantidad, otrosArticulos, alLocalStorage;
-  if (itemsDelCarrito) {
-    nuevoArreglo = itemsDelCarrito.filter(
-      (item) => item.id === itemDelCarrito.id
-    );
+  // let nuevoArreglo, nuevaCantidad, otrosArticulos, alLocalStorage;
+  // if (itemsDelCarrito) {
+  //   nuevoArreglo = itemsDelCarrito.filter(
+  //     (item) => item.id === itemDelCarrito.id
+  //   );
 
-    if (nuevoArreglo[0]) {
-      nuevoArreglo[0].cantidad = nuevoArreglo[0].cantidad + 1;
-    }
+  //   if (nuevoArreglo[0]) {
+  //     nuevoArreglo[0].cantidad = nuevoArreglo[0].cantidad + 1;
+  //   }
 
-    otrosArticulos = itemsDelCarrito.filter(
-      (item) => item.id !== itemDelCarrito.id
-    );
+  //   otrosArticulos = itemsDelCarrito.filter(
+  //     (item) => item.id !== itemDelCarrito.id
+  //   );
 
-    // let arreglo = ["Jacinto", "Acosta", "Gonzalez"]; arreglo.length (resultado = 3)
-    // ...arreglo = "Jacinto", "Acosta", "Gonzalez";
-    alLocalStorage = [...nuevoArreglo, ...otrosArticulos];
+  //   // let arreglo = ["Jacinto", "Acosta", "Gonzalez"]; arreglo.length (resultado = 3)
+  //   // ...arreglo = "Jacinto", "Acosta", "Gonzalez";
+  //   alLocalStorage = [...nuevoArreglo, ...otrosArticulos];
 
-    console.log("Arreglo que vamos a guardar en el localStorage");
-    console.log(alLocalStorage);
-  }
+  //   console.log("Arreglo que vamos a guardar en el localStorage");
+  //   console.log(alLocalStorage);
+  // }
 
   // Compruebo si el articulo se guardo previamente, y de ser asi, actualizo la
   // la cantidad de articulos.
-  // if (itemsDelCarrito) {
-  //   itemsDelCarrito.forEach((item) => {
-  //     if (item.id === itemDelCarrito.id) {
-  //       existeElemento = true;
+  if (itemsDelCarrito) {
+    itemsDelCarrito.forEach((item) => {
+      if (item.id === itemDelCarrito.id) {
+        existeElemento = true;
 
-  //       // Actualizamos la cantidad de articulos en funcion a los encontrados en el
-  //       // array.
-  //       let cantidadAnterior = parseInt(item.cantidad);
-  //       let nuevaCantidad = cantidadAnterior + 1;
-  //       item.cantidad = nuevaCantidad;
-  //     }
-  //   });
-  // }
+        // Actualizamos la cantidad de articulos en funcion a los encontrados en el
+        // array.
+        let cantidadAnterior = parseInt(item.cantidad);
+        let nuevaCantidad = cantidadAnterior + 1;
+        item.cantidad = nuevaCantidad;
+      }
+    });
+  }
 
-  // if (!existeElemento) {
-  //   if (itemsDelCarrito === null) {
-  //     itemsDelCarrito = [];
-  //     itemsDelCarrito.push(itemDelCarrito);
-  //   } else {
-  //     itemsDelCarrito.push(itemDelCarrito);
-  //   }
-  // }
-  // console.log("Items almacenados hasta ahora:");
-  // console.log(itemsDelCarrito);
+  if (!existeElemento) {
+    if (itemsDelCarrito === null) {
+      itemsDelCarrito = [];
+      itemsDelCarrito.push(itemDelCarrito);
+    } else {
+      itemsDelCarrito.push(itemDelCarrito);
+    }
+  }
+  console.log("Items almacenados hasta ahora:");
+  console.log(itemsDelCarrito);
 
   // Usamos el metodo JSON.stringify() para convertir todos los valores del arreglo
   // en strings.
