@@ -114,61 +114,70 @@ function itemTienda(itemTitulo, itemPrecio, itemImg) {
   shoppingCartItemsContainer.append(shoppingCartRow);
 }
 
-/**
- * Cargamos los elementos del carrito que tenemos almacenados en el localStorage
- */
-const prepareCartValues = () => {
-  const formDiv = document.querySelector(".formulario");
-  console.log(formDiv);
-
-  // Creamos el elemento que contiene la informacion del carrito
+/**  Carga taoda la informacion del localStorage en variables para manipularla luego.*/
+const prepareCartData = () => {
   const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
-  console.log(cartData);
+  const formulario = document.querySelector(".formulario");
 
-  cartData.forEach((cartItem) => {
-    const itemDiv = createCartItem(cartItem);
-    formDiv.append(itemDiv);
-  });
+  if (cartData) {
+    cartData.forEach((cartItem) => {
+      const itemDiv = createCartItem(cartItem);
+      formulario.append(itemDiv);
+    });
+  } else {
+    let infoP = document.createElement("p");
+    infoP.setAttribute("class", "info-p");
 
-  addCartTotal();
+    infoP.innerHTML = `No tiene productos en su carrito actualmente`;
+    formulario.append(infoP);
+  }
+
+  calculateTotalAmount(cartData);
 };
 
 const createCartItem = (data) => {
-  let itemDiv = document.createElement("div");
-  itemDiv.setAttribute("class", "cart-item");
+  let wrapperDiv = document.createElement("div");
+  wrapperDiv.setAttribute("class", "cart-item");
 
-  // Div con informacion del articulo
+  // Creamos el div que contiene la imagen del producto
+  let imageDiv = document.createElement("div");
+  imageDiv.setAttribute("class", "articulos");
+  let productImage = document.createElement("img");
+  productImage.setAttribute("src", `${data.imagen}`);
+  productImage.setAttribute("alt", `${data.nombre}`);
+  productImage.setAttribute("class", "product-img");
+
+  imageDiv.append(productImage);
+
+  // Creamos el div que contiene el nombre del producto
   let articleDiv = document.createElement("div");
   articleDiv.setAttribute("class", "articulos");
+  let articleP = document.createElement("p");
 
-  let p = document.createElement("p");
-  p.innerHTML = `${data.nombre}`;
+  articleP.innerHTML = `${data.nombre}`;
+  articleDiv.append(articleP);
 
-  articleDiv.append(p);
-
-  // Div con informacion de la cantidad de articulos
+  // Creamos el div que contiene la cantidad del producto
   let amountDiv = document.createElement("div");
   amountDiv.setAttribute("class", "articulos");
+  let amountP = document.createElement("p");
 
-  let p2 = document.createElement("p");
-  p2.innerHTML = `${data.cantidad}`;
+  amountP.innerHTML = `${data.cantidad}`;
+  amountDiv.append(amountP);
 
-  amountDiv.append(p2);
-
-  // Div con informacion del precio de los articulos
+  // Creamos el div que contiene el precio del producto
   let priceDiv = document.createElement("div");
   priceDiv.setAttribute("class", "articulos");
+  let priceP = document.createElement("p");
 
-  let p3 = document.createElement("p");
-  p3.innerHTML = `${data.precio}`;
+  priceP.innerHTML = `${data.precio}`;
+  priceDiv.append(priceP);
 
-  priceDiv.append(p3);
-
-  // Boton para eliminar articulos
-  const deleteButton = document.createElement("button");
-  deleteButton.setAttribute("class", "btn-delete");
-  deleteButton.addEventListener("click", function () {
-    deleteCartItem(data.id);
+  // Creamos el boton de eliminar producto
+  let deleteBtn = document.createElement("button");
+  deleteBtn.setAttribute("class", "btn-delete");
+  deleteBtn.addEventListener("click", function () {
+    deleteItem(data.id);
   });
 
   let iconSpan = document.createElement("span");
@@ -176,32 +185,31 @@ const createCartItem = (data) => {
   icon.setAttribute("class", "fas fa-trash");
 
   iconSpan.append(icon);
-  deleteButton.append(iconSpan);
+  deleteBtn.append(iconSpan);
 
-  // Añadimos todos los elementos al div correspondiente
-  itemDiv.append(articleDiv);
-  itemDiv.append(amountDiv);
-  itemDiv.append(priceDiv);
-  itemDiv.append(deleteButton);
+  // Añadimos todos los elementos creados al contenedor
+  wrapperDiv.append(imageDiv);
+  wrapperDiv.append(articleDiv);
+  wrapperDiv.append(amountDiv);
+  wrapperDiv.append(priceDiv);
+  wrapperDiv.append(deleteBtn);
 
-  return itemDiv;
+  return wrapperDiv;
 };
 
-const deleteCartItem = (itemId) => {
+const deleteItem = (itemId) => {
   console.log(itemId);
 };
 
-const addCartTotal = () => {
-  let totalPrice = 0;
-  const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
-
-  cartData.forEach((item) => {
-    totalPrice = totalPrice + parseFloat(item.precio * item.cantidad);
-  });
-
+const calculateTotalAMount = (itemsData) => {
+  let totalAmount = 0;
   const totalDiv = document.querySelector(".total");
-  console.log(totalDiv);
-  let p = document.createElement("p");
-  p.innerHTML = `TOTAL: ${totalPrice.toFixed(3)}`;
-  totalDiv.append(p);
+  let totalP = document.createElement("p");
+
+  itemsData.forEach((item) => {
+    totalAmount = totalAmount + parseFloat(item.precio * item.cantidad);
+  });
+  totalP.innerHTML = `TOTAL: ${totalAmount.toFixed(3)}`;
+
+  totalDiv.append(totalP);
 };
