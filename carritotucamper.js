@@ -30,61 +30,34 @@ function comprarBoton(event) {
   };
 
   // Haciendo la misma comprobacion, pero con .filter()
-  let nuevoArreglo, nuevaCantidad, otrosArticulos, alLocalStorage;
+  let nuevoArreglo, otrosArticulos, alLocalStorage;
   if (itemsDelCarrito.length > 0) {
     nuevoArreglo = itemsDelCarrito.filter(
       (item) => item.id === itemDelCarrito.id
     );
 
-    if (nuevoArreglo[0]) {
-      nuevoArreglo[0].cantidad = nuevoArreglo[0].cantidad + 1;
-    }
-
     otrosArticulos = itemsDelCarrito.filter(
       (item) => item.id !== itemDelCarrito.id
     );
 
-    // let arreglo = ["Jacinto", "Acosta", "Gonzalez"]; arreglo.length (resultado = 3)
-    // ...arreglo = "Jacinto", "Acosta", "Gonzalez";
-    alLocalStorage = [...nuevoArreglo, ...otrosArticulos];
+    if (nuevoArreglo[0]) {
+      nuevoArreglo[0].cantidad = nuevoArreglo[0].cantidad + 1;
+      // let arreglo = ["Jacinto", "Acosta", "Gonzalez"]; arreglo.length (resultado = 3)
+      // ...arreglo = "Jacinto", "Acosta", "Gonzalez";
+      alLocalStorage = [...nuevoArreglo, ...otrosArticulos];
+    } else {
+      alLocalStorage = [itemDelCarrito, ...otrosArticulos];
+    }
 
     console.log("Arreglo que vamos a guardar en el localStorage");
     console.log(alLocalStorage);
+    // Usamos el metodo JSON.stringify() para convertir todos los valores del arreglo
+    // en strings.
+    localStorage.setItem("itemsDelCarrito", JSON.stringify(alLocalStorage));
   } else {
     alLocalStorage = [itemDelCarrito];
-    console.log(alLocalStorage);
+    localStorage.setItem("itemsDelCarrito", JSON.stringify(alLocalStorage));
   }
-
-  // Compruebo si el articulo se guardo previamente, y de ser asi, actualizo la
-  // la cantidad de articulos.
-  // if (itemsDelCarrito) {
-  //   itemsDelCarrito.forEach((item) => {
-  //     if (item.id === itemDelCarrito.id) {
-  //       existeElemento = true;
-
-  //       // Actualizamos la cantidad de articulos en funcion a los encontrados en el
-  //       // array.
-  //       let cantidadAnterior = parseInt(item.cantidad);
-  //       let nuevaCantidad = cantidadAnterior + 1;
-  //       item.cantidad = nuevaCantidad;
-  //     }
-  //   });
-  // }
-
-  // if (!existeElemento) {
-  //   if (itemsDelCarrito === null) {
-  //     itemsDelCarrito = [];
-  //     itemsDelCarrito.push(itemDelCarrito);
-  //   } else {
-  //     itemsDelCarrito.push(itemDelCarrito);
-  //   }
-  // }
-  // console.log("Items almacenados hasta ahora:");
-  // console.log(itemsDelCarrito);
-
-  // Usamos el metodo JSON.stringify() para convertir todos los valores del arreglo
-  // en strings.
-  // localStorage.setItem("itemsDelCarrito", JSON.stringify(itemsDelCarrito));
 
   calculateCartItems();
   itemTienda(itemTitulo, itemPrecio, itemImg);
