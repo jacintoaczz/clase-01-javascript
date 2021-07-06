@@ -1177,6 +1177,13 @@ span:hover {
   font-weight: bold;
 }
 
+.info-p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .cart-item {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
