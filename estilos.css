@@ -1217,8 +1217,8 @@ span:hover {
 
 .cart-badge {
   margin: 0;
-  color: whitesmoke;
-  background-color: blue;
+  color: black;
+  background-color: #fabc13;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
