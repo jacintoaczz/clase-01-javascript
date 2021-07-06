@@ -226,9 +226,9 @@ calculateCartItems = () => {
       totalCartItems += parseInt(item.cantidad);
     });
 
-    itemsBadge.classList.remove("d-none");
+    itemsBadge.classList.add("show-badge");
     itemsBadge.innerHTML = totalCartItems;
   } else {
-    itemsBadge.classList.add("d-none");
+    itemsBadge.classList.remove("show-badge");
   }
 };
