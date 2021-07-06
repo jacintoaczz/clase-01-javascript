@@ -120,7 +120,7 @@ const prepareCartData = () => {
   const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
   const formulario = document.querySelector(".formulario");
 
-  if (cartData) {
+  if (cartData.length > 0) {
     cartData.forEach((cartItem) => {
       const itemDiv = createCartItem(cartItem);
       formulario.append(itemDiv);
@@ -193,8 +193,8 @@ const createCartItem = (data) => {
   // Creamos el boton de eliminar producto
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("class", "btn-delete");
-  deleteBtn.addEventListener("click", function () {
-    deleteItem(data.id);
+  deleteBtn.addEventListener("click", function (e) {
+    deleteItem(e, data.id);
   });
 
   let iconSpan = document.createElement("span");
@@ -215,8 +215,26 @@ const createCartItem = (data) => {
   return wrapperDiv;
 };
 
-const deleteItem = (itemId) => {
-  console.log(itemId);
+const deleteItem = (event, itemId) => {
+  const formulario = document.querySelector(".formulario");
+  const totalAmountP = document.querySelector(".total > p");
+  totalAmountP.remove();
+  // Borramos el div que contiene el boton presionado
+  event.target.parentElement.remove();
+
+  const cartItems = JSON.parse(localStorage.getItem("itemsDelCarrito"));
+  const newCartItems = cartItems.filter((item) => item.id !== itemId);
+
+  localStorage.setItem("itemsDelCarrito", JSON.stringify(newCartItems));
+  calculateTotalAmount(newCartItems);
+
+  if (newCartItems.length === 0) {
+    let infoP = document.createElement("p");
+    infoP.setAttribute("class", "info-p");
+
+    infoP.innerHTML = `No tiene productos en su carrito actualmente`;
+    formulario.append(infoP);
+  }
 };
 
 const calculateTotalAmount = (itemsData) => {
