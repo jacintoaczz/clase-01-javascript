@@ -141,39 +141,54 @@ const createCartItem = (data) => {
   let wrapperDiv = document.createElement("div");
   wrapperDiv.setAttribute("class", "cart-item");
 
-  // Creamos el div que contiene la imagen del producto
-  let imageDiv = document.createElement("div");
-  imageDiv.setAttribute("class", "articulos");
-  let productImage = document.createElement("img");
-  productImage.setAttribute("src", `${data.imagen}`);
-  productImage.setAttribute("alt", `${data.nombre}`);
-  productImage.setAttribute("class", "product-img");
+  const cartItemHTML = `
+    <div class="articulos">
+      <img src="${data.imagen}" alt="${data.nombre}" class="product-img">
+    </div>
+      <div class="articulos">
+        <p>${data.nombre}</p>
+      </div>
+    <div class="articulos">
+      <p>${data.cantidad}</p>
+    </div>
+    <div class="articulos">
+      <p>${data.precio}</p>
+    </div>
+  `;
 
-  imageDiv.append(productImage);
+  // Creamos el div que contiene la imagen del producto
+  // let imageDiv = document.createElement("div");
+  // imageDiv.setAttribute("class", "articulos");
+  // let productImage = document.createElement("img");
+  // productImage.setAttribute("src", `${data.imagen}`);
+  // productImage.setAttribute("alt", `${data.nombre}`);
+  // productImage.setAttribute("class", "product-img");
+
+  // imageDiv.append(productImage);
 
   // Creamos el div que contiene el nombre del producto
-  let articleDiv = document.createElement("div");
-  articleDiv.setAttribute("class", "articulos");
-  let articleP = document.createElement("p");
+  // let articleDiv = document.createElement("div");
+  // articleDiv.setAttribute("class", "articulos");
+  // let articleP = document.createElement("p");
 
-  articleP.innerHTML = `${data.nombre}`;
-  articleDiv.append(articleP);
+  // articleP.innerHTML = `${data.nombre}`;
+  // articleDiv.append(articleP);
 
   // Creamos el div que contiene la cantidad del producto
-  let amountDiv = document.createElement("div");
-  amountDiv.setAttribute("class", "articulos");
-  let amountP = document.createElement("p");
+  // let amountDiv = document.createElement("div");
+  // amountDiv.setAttribute("class", "articulos");
+  // let amountP = document.createElement("p");
 
-  amountP.innerHTML = `${data.cantidad}`;
-  amountDiv.append(amountP);
+  // amountP.innerHTML = `${data.cantidad}`;
+  // amountDiv.append(amountP);
 
   // Creamos el div que contiene el precio del producto
-  let priceDiv = document.createElement("div");
-  priceDiv.setAttribute("class", "articulos");
-  let priceP = document.createElement("p");
+  // let priceDiv = document.createElement("div");
+  // priceDiv.setAttribute("class", "articulos");
+  // let priceP = document.createElement("p");
 
-  priceP.innerHTML = `${data.precio}`;
-  priceDiv.append(priceP);
+  // priceP.innerHTML = `${data.precio}`;
+  // priceDiv.append(priceP);
 
   // Creamos el boton de eliminar producto
   let deleteBtn = document.createElement("button");
@@ -190,10 +205,11 @@ const createCartItem = (data) => {
   deleteBtn.append(iconSpan);
 
   // Añadimos todos los elementos creados al contenedor
-  wrapperDiv.append(imageDiv);
-  wrapperDiv.append(articleDiv);
-  wrapperDiv.append(amountDiv);
-  wrapperDiv.append(priceDiv);
+  // wrapperDiv.append(imageDiv);
+  // wrapperDiv.append(articleDiv);
+  // wrapperDiv.append(amountDiv);
+  // wrapperDiv.append(priceDiv);
+  wrapperDiv.innerHTML = cartItemHTML;
   wrapperDiv.append(deleteBtn);
 
   return wrapperDiv;
