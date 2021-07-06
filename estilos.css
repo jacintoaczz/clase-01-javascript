@@ -1158,27 +1158,54 @@ span:hover {
   padding: 1rem;
 }
 
+.articulos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cabecera {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
+
+  border-bottom: 1px solid #9e9595;
 }
 
 .cart-item {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   margin: 0.5rem 0rem;
 }
 
+.cart-item button {
+  justify-self: center;
+  align-self: center;
+}
+
 .btn-delete {
-  display: block;
+  display: flex;
   color: red;
   border-radius: 0.5rem;
   border-color: red;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-delete span {
+  margin: 0;
 }
 
 .d-none {
   display: none;
+}
+
+.product-img {
+  max-height: 5rem;
+  max-width: 5rem;
 }
