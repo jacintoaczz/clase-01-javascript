@@ -83,6 +83,7 @@ function comprarBoton(event) {
   // en strings.
   localStorage.setItem("itemsDelCarrito", JSON.stringify(itemsDelCarrito));
 
+  calculateCartItems();
   itemTienda(itemTitulo, itemPrecio, itemImg);
 }
 
@@ -133,6 +134,7 @@ const prepareCartData = () => {
   }
 
   calculateTotalAmount(cartData);
+  calculateCartItems();
 };
 
 const createCartItem = (data) => {
@@ -212,4 +214,21 @@ const calculateTotalAmount = (itemsData) => {
   totalP.innerHTML = `TOTAL: ${totalAmount.toFixed(3)}`;
 
   totalDiv.append(totalP);
+};
+
+calculateCartItems = () => {
+  let totalCartItems = 0;
+  const cartItems = JSON.parse(localStorage.getItem("itemsDelCarrito"));
+  const itemsBadge = document.querySelector(".cart-badge");
+
+  if (cartItems) {
+    cartItems.forEach((item) => {
+      totalCartItems += parseInt(item.cantidad);
+    });
+
+    itemsBadge.classList.remove("d-none");
+    itemsBadge.innerHTML = totalCartItems;
+  } else {
+    itemsBadge.classList.add("d-none");
+  }
 };
