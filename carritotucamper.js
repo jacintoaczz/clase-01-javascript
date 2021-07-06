@@ -201,7 +201,7 @@ const deleteItem = (itemId) => {
   console.log(itemId);
 };
 
-const calculateTotalAMount = (itemsData) => {
+const calculateTotalAmount = (itemsData) => {
   let totalAmount = 0;
   const totalDiv = document.querySelector(".total");
   let totalP = document.createElement("p");
