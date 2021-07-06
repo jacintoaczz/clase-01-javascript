@@ -156,40 +156,6 @@ const createCartItem = (data) => {
     </div>
   `;
 
-  // Creamos el div que contiene la imagen del producto
-  // let imageDiv = document.createElement("div");
-  // imageDiv.setAttribute("class", "articulos");
-  // let productImage = document.createElement("img");
-  // productImage.setAttribute("src", `${data.imagen}`);
-  // productImage.setAttribute("alt", `${data.nombre}`);
-  // productImage.setAttribute("class", "product-img");
-
-  // imageDiv.append(productImage);
-
-  // Creamos el div que contiene el nombre del producto
-  // let articleDiv = document.createElement("div");
-  // articleDiv.setAttribute("class", "articulos");
-  // let articleP = document.createElement("p");
-
-  // articleP.innerHTML = `${data.nombre}`;
-  // articleDiv.append(articleP);
-
-  // Creamos el div que contiene la cantidad del producto
-  // let amountDiv = document.createElement("div");
-  // amountDiv.setAttribute("class", "articulos");
-  // let amountP = document.createElement("p");
-
-  // amountP.innerHTML = `${data.cantidad}`;
-  // amountDiv.append(amountP);
-
-  // Creamos el div que contiene el precio del producto
-  // let priceDiv = document.createElement("div");
-  // priceDiv.setAttribute("class", "articulos");
-  // let priceP = document.createElement("p");
-
-  // priceP.innerHTML = `${data.precio}`;
-  // priceDiv.append(priceP);
-
   // Creamos el boton de eliminar producto
   let deleteBtn = document.createElement("button");
   deleteBtn.setAttribute("class", "btn-delete");
@@ -205,10 +171,6 @@ const createCartItem = (data) => {
   deleteBtn.append(iconSpan);
 
   // Añadimos todos los elementos creados al contenedor
-  // wrapperDiv.append(imageDiv);
-  // wrapperDiv.append(articleDiv);
-  // wrapperDiv.append(amountDiv);
-  // wrapperDiv.append(priceDiv);
   wrapperDiv.innerHTML = cartItemHTML;
   wrapperDiv.append(deleteBtn);
 
@@ -255,7 +217,7 @@ calculateCartItems = () => {
   const cartItems = JSON.parse(localStorage.getItem("itemsDelCarrito"));
   const itemsBadge = document.querySelector(".cart-badge");
 
-  if (cartItems) {
+  if (cartItems.length > 0) {
     cartItems.forEach((item) => {
       totalCartItems += parseInt(item.cantidad);
     });
