@@ -10,7 +10,6 @@ const shoppingCartItemsContainer = document.querySelector(
 
 function comprarBoton(event) {
   let itemsDelCarrito = JSON.parse(localStorage.getItem("itemsDelCarrito"));
-  let existeElemento = false;
 
   const boton = event.target;
   const item = boton.closest(".item");
@@ -91,7 +90,11 @@ function itemTienda(itemTitulo, itemPrecio, itemImg) {
   shoppingCartItemsContainer.append(shoppingCartRow);
 }
 
-/**  Carga taoda la informacion del localStorage en variables para manipularla luego.*/
+/* 
+  A partir de aca comienzan algunos metodos desarrollados en clase.
+*/
+
+/**  Carga toda la informacion del localStorage en variables para manipularla luego.*/
 const prepareCartData = () => {
   const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
   const formulario = document.querySelector(".formulario");
@@ -153,6 +156,10 @@ const createCartItem = (data) => {
   return wrapperDiv;
 };
 
+/**
+ * Toma el id del item del carrito y lo usa para eliminar dicho item del localStorage.
+ * Elimina del DOM el elemento donde se hizo el clic.
+ */
 const deleteItem = (event, itemId) => {
   const formulario = document.querySelector(".formulario");
   const totalAmountP = document.querySelector(".total > p");
@@ -175,6 +182,9 @@ const deleteItem = (event, itemId) => {
   }
 };
 
+/**
+ * Recorre el arreglo de items y calcula el precio total de los articulos en el carrito.
+ */
 const calculateTotalAmount = (itemsData) => {
   let totalAmount = 0;
   const totalDiv = document.querySelector(".total");
@@ -188,6 +198,10 @@ const calculateTotalAmount = (itemsData) => {
   totalDiv.append(totalP);
 };
 
+/**
+ * Cuenta el numero total de articulos que se encuentran en el carrito, obteniendo dicha informacion
+ * del localStorage.
+ */
 calculateCartItems = () => {
   let totalCartItems = 0;
   const cartItems = JSON.parse(localStorage.getItem("itemsDelCarrito"));
