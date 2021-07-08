@@ -82,6 +82,8 @@
   padding: 6px;
   border-radius: 40px;
   margin-right: 80px;
+
+  position: relative;
 }
 .logo-buscar-carro i {
   color: #707070;
@@ -1211,6 +1213,7 @@ span:hover {
 
 .btn-delete span {
   margin: 0;
+  pointer-events: none;
 }
 
 .d-none {
@@ -1222,19 +1225,29 @@ span:hover {
   max-width: 5rem;
 }
 
+.info-p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* 
+  Estilos para la medalla del contador de items del carrito */
 .cart-badge {
-  margin: 0;
-  color: black;
-  background-color: #fabc13;
+  background-color: red;
+  color: #ffffff;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+  font-weight: bold;
+  position: absolute;
   text-align: center;
 
+  margin: 0;
   padding: 0.2em;
-  position: absolute;
-  top: -10px;
-  right: -15px;
+  top: -11px;
+  right: -14px;
 
   transform: scale(0);
 
