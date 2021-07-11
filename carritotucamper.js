@@ -131,7 +131,7 @@ const prepareCartData = () => {
   const cartData = JSON.parse(localStorage.getItem("itemsDelCarrito"));
   const formulario = document.querySelector(".formulario");
 
-  if (cartData !== null && cartData !== []) {
+  if (cartData !== null && cartData.length > 0) {
     // Un forEach no retorna nada.
     cartData.forEach((cartItem) => {
       const itemDiv = createCartItem(cartItem);
@@ -244,8 +244,9 @@ const deleteItem = (event, itemId) => {
   const newCartItems = cartItems.filter((item) => item.id !== itemId);
 
   localStorage.setItem("itemsDelCarrito", JSON.stringify(newCartItems));
+  console.log(newCartItems);
 
-  if (newCartItems === []) {
+  if (newCartItems.length === 0) {
     let infoP = document.createElement("p");
     infoP.setAttribute("class", "info-p");
 
@@ -264,7 +265,7 @@ const calculateTotalAmount = (itemsData) => {
   const totalDiv = document.querySelector(".total");
   let totalP = document.createElement("p");
 
-  if (itemsData !== null && itemsData !== []) {
+  if (itemsData !== null && itemsData.length > 0) {
     itemsData.forEach((item) => {
       totalAmount = totalAmount + parseFloat(item.precio * item.cantidad);
     });
@@ -281,7 +282,7 @@ const calculateCartItems = () => {
   const cartItems = JSON.parse(localStorage.getItem("itemsDelCarrito"));
   const cartItemsBadge = document.querySelector(".cart-badge");
 
-  if (cartItems !== null) {
+  if (cartItems !== null && cartItems.length !== 0) {
     cartItems.forEach((item) => {
       totalCartItems += parseInt(item.cantidad);
     });
